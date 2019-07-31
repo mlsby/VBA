@@ -1,0 +1,22 @@
+'Replaces all "," with ";" in a CSV file 
+Private Sub commaReplace(fullName As String)
+    Dim objFSO
+    Const ForReading = 1
+    
+    'define a TextStream object
+    Dim objTS
+    Dim strContents As String
+
+    'read everything from the csv file, replacing comma with semicolon
+    Set objFSO = CreateObject("Scripting.FileSystemObject")
+    Set objTS = objFSO.OpenTextFile(fullName, ForReading)
+    strContents = objTS.ReadAll
+    strContents = Replace(strContents, ",", ";")
+    objTS.Close
+
+    'write everything out and overwrite the old file
+    Set objTS = objFSO.CreateTextFile(fullName)
+    objTS.Write strContents
+    objTS.Close
+
+End Sub
