@@ -1,0 +1,20 @@
+Sub demoSelect()
+    Dim company As String
+    Dim country As String
+
+    company = "LUZ"
+    Select Case company
+       Case "LUZ"
+           country = "CH"
+       Case "BOS"
+           country = "US"
+       Case "TOR"
+           country = "CA"
+       Case "HKG"
+           country = "CN"
+       Case Else
+            MsgBox "error"
+            Exit Sub
+    End Select
+    MsgBox country
+End Sub
