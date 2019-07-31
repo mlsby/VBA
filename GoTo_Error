@@ -1,0 +1,13 @@
+Private Sub demoError()
+    On Error GoTo errOne
+    'first code...
+    On Error GoTo errTwo
+    'second code...
+    Exit Sub
+errOne:
+    MsgBox "You have an error in first code"
+    Exit Sub
+errTwo:
+    MsgBox "You have an error in second code"
+    Exit Sub
+End Sub
