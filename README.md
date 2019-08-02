@@ -11,6 +11,6 @@ Other: other...
 
 
 
-# Optimize code 
-Greate tips for optimizing code
+# Links
+Greate tips for optimizing code  
 https://www.ozgrid.com/VBA/SpeedingUpVBACode.htm
