@@ -1,1 +1,32 @@
 
+Function ChooseFile()
+
+Dim fd As FileDialog
+
+Dim FileObj As String
+
+Set fd = Application.FileDialog(msoFileDialogOpen)
+
+With fd
+
+.AllowMultiSelect = False
+
+.Filters.Clear
+
+.Filters.Add "Choose a file", "*.xlsx*", 1
+
+If .Show Then
+
+FileObj = .SelectedItems(1)
+
+Else
+
+FileObj = vbNullString
+
+End If
+
+End With
+
+ChooseFile = FileObj
+
+End Functio
