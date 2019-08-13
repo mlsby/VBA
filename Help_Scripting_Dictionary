@@ -1,4 +1,4 @@
-'A Script Dictionary is a key-value map, where the key can be anything excep an array and the value can be anything (including array).
+'A Script Dictionary is a key-value map, where the key can be anything except an array and the value can be anything (including array).
 'For more information than this brief intro go to: https://excelmacromastery.com/vba-dictionary/
 'Creating a SD:
     Dim dict As Object
