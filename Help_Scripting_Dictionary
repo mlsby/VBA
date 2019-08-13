@@ -8,7 +8,7 @@
     dict.Add "Sweden", 100 'example with integer value
     dict.Add "Sweden", Array(100,200) 'example with array
  
- 'Printing key and value
+ 'Printing the value when you have the key
     MsgBox dict("Sweden") 'Example with integer
     MsgBox dict("Swedem")(0) & " " & dict("Sweden")(1) 'Prints both values (example with array)
   
