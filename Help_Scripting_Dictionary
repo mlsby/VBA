@@ -1,0 +1,23 @@
+'A Script Dictionary is a key-value map, where the key can be anything excep an array and the value can be anything (including array).
+'For more information than this brief intro go to: https://excelmacromastery.com/vba-dictionary/
+'Creating a SD:
+    Dim dict As Object
+    Set dict = CreateObject("scripting.dictionary")
+  
+ 'Adding a object to the SD, the first value is the key and the second is the value 
+    dict.Add "Sweden", 100 'example with integer value
+    dict.Add "Sweden", Array(100,200) 'example with array
+ 
+ 'Printing key and value
+    MsgBox dict("Sweden") 'Example with integer
+    MsgBox dict("Swedem")(0) & " " & dict("Sweden")(1) 'Prints both values (example with array)
+  
+ 'Altering a object
+    dict("Sweden") = 150 'example with int
+    dict("Sweden") = Array(150,dict("Sweden")(1)) 'example with array, note that we did not change the second value inte the array.
+  
+ 'Check if exists (Returns true or false)
+    dict.Exists("Norway") 'False
+    dict.Exists("Sweden") 'True
+
+  
