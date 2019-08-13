@@ -4,7 +4,7 @@
     Dim dict As Object
     Set dict = CreateObject("scripting.dictionary")
   
- 'Adding a object to the SD, the first value is the key and the second is the value 
+ 'Adding a item to the SD, the first value is the key and the second is the value 
     dict.Add "Sweden", 100 'example with integer value
     dict.Add "Sweden", Array(100,200) 'example with array
  
@@ -12,7 +12,7 @@
     MsgBox dict("Sweden") 'Example with integer
     MsgBox dict("Swedem")(0) & " " & dict("Sweden")(1) 'Prints both values (example with array)
   
- 'Altering a object
+ 'Altering a item
     dict("Sweden") = 150 'example with int
     dict("Sweden") = Array(150,dict("Sweden")(1)) 'example with array, note that we did not change the second value inte the array.
   
@@ -20,4 +20,8 @@
     dict.Exists("Norway") 'False
     dict.Exists("Sweden") 'True
 
-  
+ 'Removing an item
+    dict.Remove "Sweden"
+    
+ 'Get number of items
+ 	dict.Count
