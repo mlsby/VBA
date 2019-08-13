@@ -14,7 +14,7 @@
   
  'Altering a item
     dict("Sweden") = 150 'example with int
-    dict("Sweden") = Array(150,dict("Sweden")(1)) 'example with array, note that we did not change the second value inte the array.
+    dict("Sweden") = Array(150,dict("Sweden")(1)) 'example with array, note that we did not change the second value in the array.
   
  'Check if exists (Returns true or false)
     dict.Exists("Norway") 'False
